@@ -1,7 +1,6 @@
 <?php
-var_dump($_POST);
+#var_dump($_POST);
 
-echo $_POST["emailField"];
 $today = date("Y-m");
 $presentDateMax = strtotime("-2 months");
 # echo date("Y-m", $presentDateMax);
@@ -17,6 +16,8 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
         <link href="./style.css" rel="stylesheet">
 </head>
     <body>
+        <div class="container">
+        <input type="button" value="Edit Data" onclick="history.back()">
         <h1><?php echo $_POST["nameField"] ?></h1>
         <p>
             <?php echo $_POST["emailField"] ?> - 
@@ -92,5 +93,6 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
             <br />
             <?php echo $_POST["eduField"] ?> <?php echo $_POST["gradYear"] ?>
         </p>
+        </div>
     </body>
 </html>
