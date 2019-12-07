@@ -30,7 +30,12 @@ echo $_POST["emailField"];
                 $duty_array = [];
                 $duties = $_POST["duties"];
                 if($duties != ""){
-                    $duty_array = explode("\n", $duties);
+                    $duty_lines = explode("\n", $duties);
+                    foreach($duty_lines as $line) {
+                        if (trim($line) != "") { 
+                            array_push($duty_array, trim($line)); 
+                        }
+                    }
                 }
             ?>
          <ul>  
