@@ -2,6 +2,9 @@
 var_dump($_POST);
 
 echo $_POST["emailField"];
+$today = date("Y-m");
+$presentDateMin = strtotime("-2 months");
+echo date("Y-m", $presentDateMin);
 ?>
 
 
@@ -21,7 +24,13 @@ echo $_POST["emailField"];
             <i><?php echo $_POST["jobTitle"] ?></i> - <?php echo $_POST["companyName"] ?>
         </p>
         <p>
-            <?php echo $_POST["startDate"] ?> - <?php echo $_POST["endDate"] ?>
+            <?php echo $_POST["startDate"] ?> - 
+            <?php if($_POST["endDate"] > $presentDateMin) {
+                echo "Present";
+            }
+            else {
+                echo $_POST["endDate"]; 
+            } ?>
         
         </p>
 
