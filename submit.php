@@ -26,7 +26,7 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
 
         <hr>
         <div id="skills">
-        <h2>Skills</h2>
+        <h2>Technical Skills</h2>
         <?php 
                 $skill_array = [];
                 $skills = $_POST["skills"];
@@ -60,43 +60,45 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
             <i><?php echo $_POST["jobTitle"] ?></i> - <?php echo $_POST["companyName"] ?>
         </p>
         <p>
-            <?php echo $_POST["startDate"] ?> - 
+            <?php echo date("F Y", strtotime($_POST["startDate"])) ?> - 
             <?php if($_POST["endDate"] > $presentMaxYearMonth) {
                 echo "Present";
             }
             else {
-                echo $_POST["endDate"]; 
+                echo date("F Y", strtotime($_POST["endDate"])); 
             } ?>
         
         </p>
 
         
-            <?php 
-                $duty_array = [];
-                $duties = $_POST["duties"];
-                if($duties != ""){
-                    $duty_lines = explode("\n", $duties);
-                    foreach($duty_lines as $line) {
-                        if (trim($line) != "") { 
-                            array_push($duty_array, trim($line)); 
-                        }
+        <?php 
+            $duty_array = [];
+            $duties = $_POST["duties"];
+            if($duties != ""){
+                $duty_lines = explode("\n", $duties);
+                foreach($duty_lines as $line) {
+                    if (trim($line) != "") { 
+                        array_push($duty_array, trim($line)); 
                     }
                 }
-            ?>
-         <ul>  
-                <?php  foreach($duty_array as $line) { ?>
-                    <li><?php echo $line; ?></li>
-                <?php } ?>
-            </ul>
-                </div>
-                <div id="education">
-        <h2>Education</h2>
-        <p>  
-            <?php echo $_POST["schoolName"] ?>
-            <br />
-            <?php echo $_POST["eduField"] ?> <?php echo $_POST["gradYear"] ?>
-        </p>
-                </div>
+            }
+        ?>
+        <ul>  
+            <?php  foreach($duty_array as $line) { ?>
+                <li><?php echo $line; ?></li>
+            <?php } ?>
+        </ul>
+        </div>
+
+        <div id="education">
+            <h2>Education</h2>
+            <p>  
+                <?php echo $_POST["schoolName"] ?>
+                <br />
+                <?php echo $_POST["eduField"] ?> <?php echo $_POST["gradYear"] ?>
+            </p>
+        </div>
+
         </div>
     </body>
 </html>

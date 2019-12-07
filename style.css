@@ -1,7 +1,7 @@
 /* keep all the styles on this */
 
 body {
-    font-family: 'sans-serif';
+    font-family: 'tahoma', 'verdana', 'sans-serif';
     font-size: 22px;
 
 }
@@ -10,9 +10,21 @@ body {
 .container {
     display: flex; 
     flex-flow: column;
+    justify-content: space-around;
 }
 
 
 .skill-list {
     list-style: none;
 }
+
+h1, h2, h3, h4, h5 {
+    font-family: "BebasNeue";
+}
+
+/* Google Font */
+@font-face {
+    font-family: "BebasNeue";
+    src: url("BebasNeue-Regular.woff");
+}
+
