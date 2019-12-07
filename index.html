@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Build Your Resume</title>
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="POST">
+                <label for="nameField">Name</label>
+                <input type="text" class="field" name="nameField" id="nameField" placeholder="Jane Doe" />
+                <br />
+                <label for="emailField">Email</label>
+                <input type="email" class="field" name="emailField" id="emailField" placeholder="j.doe@example.com" />
+                <br />
+                <label for="githubField">Github URL</label>
+                <input type="url" class="field" name="githubField" id="githubField" placeholder="https://github.com/JDWorks" />
+                <br />
+                <label for="eduField">Highest Education</label>
+                <select class="field" name="eduField" id="eduField">
+                        <option>Highschool / GED</option>
+                        <option>Some College</option>
+                        <option>Associate</option>
+                        <option>Bachelor's</option>
+                        <option>Master's</option>
+                        <option>Doctorate</option>
+                </select>
+                <br />
+                <input type="submit" value="Submit"/>
+
+        </form>
+
+    </body>
+</html>
