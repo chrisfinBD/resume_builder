@@ -27,6 +27,9 @@
                     <option>Master's</option>
                     <option>Doctorate</option>
                 </select>
+                <input type="text" class="field" name="schoolName" id="schoolName" value="UNLV - College of Engineering" />
+
+                <input type="text" class="field" name="gradYear" id="gradYear" value="2012" />
                 <br />
 
                 <h3>Job History</h3>

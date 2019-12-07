@@ -39,5 +39,11 @@ echo $_POST["emailField"];
                 <?php } ?>
             </ul>
 
+        <h2>Education</h2>
+        <p>  
+            <?php echo $_POST["schoolName"] ?>
+            <br />
+            <?php echo $_POST["eduField"] ?> <?php echo $_POST["gradYear"] ?>
+        </p>
     </body>
 </html>
