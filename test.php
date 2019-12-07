@@ -57,6 +57,21 @@ task 3
                 <p>Separate each duty on a new line.</p>
                 <br />
 
+                <h3>Technical Skills</h3>
+                <p>Separate each skill on a new line.</p>
+                <textarea class="field" name="skills" id="skills" rows="15" cols="50">Ruby
+PHP
+Postgres SQL
+Javascript
+C#
+Perl
+Bash
+Powershell
+Batch
+Python
+
+                </textarea>
+
 
                 <input type="submit" value="Submit"/>
 

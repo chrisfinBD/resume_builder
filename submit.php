@@ -12,6 +12,10 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
 
 
 <html>
+    <head>
+        <title>Resume</title>
+        <link href="./style.css" rel="stylesheet">
+</head>
     <body>
         <h1><?php echo $_POST["nameField"] ?></h1>
         <p>
@@ -20,6 +24,32 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
         </p>
 
         <hr>
+        <h2>Skills</h2>
+        <?php 
+                $skill_array = [];
+                $skills = $_POST["skills"];
+                if($skills != ""){
+                    $skill_lines = explode("\n", $skills);
+                    foreach($skill_lines as $line) {
+                        if (trim($line) != "") { 
+                            array_push($skill_array, trim($line)); 
+                        }
+                    }
+                }
+            ?>
+         <ul class="skill-list">  
+            <?php
+                $idx = 1;  
+                foreach($skill_array as $line) { 
+                    $idx += 1;
+                    if ($idx % 4 == 0) {
+                    ?>
+
+                <li><?php echo $line; ?></li>
+            <?php } else { ?>
+                <li><?php echo $line; ?></li>
+                <?php } } ?>
+        </ul>
 
 
         <h2>Work Experience</h2>
