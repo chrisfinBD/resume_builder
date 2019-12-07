@@ -3,8 +3,11 @@ var_dump($_POST);
 
 echo $_POST["emailField"];
 $today = date("Y-m");
-$presentDateMin = strtotime("-2 months");
-echo date("Y-m", $presentDateMin);
+$presentDateMax = strtotime("-2 months");
+# echo date("Y-m", $presentDateMax);
+$presentMaxYearMonth = date("Y-m", $presentDateMax);
+
+# echo $_POST["endDate"] > $presentMaxYearMonth
 ?>
 
 
@@ -25,7 +28,7 @@ echo date("Y-m", $presentDateMin);
         </p>
         <p>
             <?php echo $_POST["startDate"] ?> - 
-            <?php if($_POST["endDate"] > $presentDateMin) {
+            <?php if($_POST["endDate"] > $presentMaxYearMonth) {
                 echo "Present";
             }
             else {
