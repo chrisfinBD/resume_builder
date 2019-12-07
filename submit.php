@@ -25,6 +25,7 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
         </p>
 
         <hr>
+        <div id="skills">
         <h2>Skills</h2>
         <?php 
                 $skill_array = [];
@@ -51,8 +52,9 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
                 <li><?php echo $line; ?></li>
                 <?php } } ?>
         </ul>
+    </div>
 
-
+    <div id="jobhistory">
         <h2>Work Experience</h2>
         <p> 
             <i><?php echo $_POST["jobTitle"] ?></i> - <?php echo $_POST["companyName"] ?>
@@ -86,13 +88,15 @@ $presentMaxYearMonth = date("Y-m", $presentDateMax);
                     <li><?php echo $line; ?></li>
                 <?php } ?>
             </ul>
-
+                </div>
+                <div id="education">
         <h2>Education</h2>
         <p>  
             <?php echo $_POST["schoolName"] ?>
             <br />
             <?php echo $_POST["eduField"] ?> <?php echo $_POST["gradYear"] ?>
         </p>
+                </div>
         </div>
     </body>
 </html>
