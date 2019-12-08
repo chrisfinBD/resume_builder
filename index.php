@@ -5,6 +5,7 @@
         <link href="./style.css" rel="stylesheet">
     </head>
     <body>
+        <h1>Build Your Resume</h1>
         <form action="./submit.php" method="POST">
                 <label for="nameField">Name</label>
                 <input type="text" class="field" name="nameField" id="nameField" placeholder="Jane Doe" />
@@ -27,6 +28,9 @@
                     <option>Master's</option>
                     <option>Doctorate</option>
                 </select>
+                <input type="text" class="field" name="schoolName" id="schoolName" />
+
+                <input type="text" class="field" name="gradYear" id="gradYear" />
                 <br />
 
                 <h3>Job History</h3>
@@ -34,18 +38,40 @@
                 <input type="text" class="field" name="jobTitle" id="jobTitle" placeholder="Title of Job Level 1" />
                 <br />
 
+                <label for="companyName">Company</label>
+                <input type="text" class="field" name="companyName" id="companyName" placeholder="Company Inc." />
+                <br />
+
                 <label for="startDate">Start Date (Month and Year)</label>
-                <input type="month" class="field" name="startDate" id="startDate" />
+                <input type="month" class="field" name="startDate" id="startDate" placeholder="2019-12" />
                 <br />
 
                 <label for="endDate">End Date (Month and Year)</label>
-                <input type="month" class="field" name="endDate" id="endDate" />
+                <input type="month" class="field" name="endDate" id="endDate" placeholder="2019-12" />
                 <br />
 
                 <label for="duties">Duties</label>
-                <textarea class="field" name="duties" id="duties" rows="4" cols="50"></textarea>
+                <textarea class="field" name="duties" id="duties" rows="4" cols="50">task 1
+task 2
+task 3
+                </textarea>
                 <p>Separate each duty on a new line.</p>
                 <br />
+
+                <h3>Technical Skills</h3>
+                <p>Separate each skill on a new line.</p>
+                <textarea class="field" name="skills" id="skills" rows="15" cols="50">Ruby
+PHP
+Postgres SQL
+Javascript
+C#
+Perl
+Bash
+Powershell
+Batch
+Python
+
+                </textarea>
 
 
                 <input type="submit" value="Submit"/>

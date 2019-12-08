@@ -5,6 +5,7 @@
         <link href="./style.css" rel="stylesheet">
     </head>
     <body>
+        <h1>Build Your Resume</h1>
         <form action="./submit.php" method="POST">
                 <label for="nameField">Name</label>
                 <input type="text" class="field" name="nameField" id="nameField" value="Jane Doe" />
